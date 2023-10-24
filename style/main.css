@@ -1,13 +1,33 @@
 
 main {
-  box-shadow: 0px -3px 3px 0px rgba(133,133,133,0.75);
--webkit-box-shadow: 0px -3px 3px 0px rgba(133,133,133,0.75);
--moz-box-shadow: 0px -3px 3px 0px rgba(133,133,133,0.75);
-padding: 2.5rem 0;
+  position: relative;
+  padding: 2.5rem 0;
 }
 
-.product-container {
-  max-width: 1600px;
+main::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  top: 0;
+  box-shadow: 0px -1px 3px 0px rgba(173,173,173,0.75);
+  -webkit-box-shadow: 0px -1px 3px 0px rgba(173,173,173,0.75);
+  -moz-box-shadow: 0px -1px 3px 0px rgba(173,173,173,0.75);
+}
+
+main::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  box-shadow: 0px -1px 3px 0px rgba(173,173,173,0.75);
+  -webkit-box-shadow: 0px -1px 3px 0px rgba(173,173,173,0.75);
+  -moz-box-shadow: 0px -1px 3px 0px rgba(173,173,173,0.75);
+}
+
+.container {
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -125,6 +145,13 @@ padding: 2.5rem 0;
 
 .number-6 p {
   font-size: 1.3rem;
+}
+
+/* note-menu */
+.note-menu {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
 }
 
 
